@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kuma-export"
+version = "0.1.0"
+description = "Uptime Kumaの設定を読み取り専用でJSON/CSV/MarkdownへエクスポートするCLI（標準ライブラリのみ・秘密情報は出力しない）"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "dgtlchika" }]
+keywords = ["uptime-kuma", "monitoring", "export", "sqlite", "inventory"]
+
+[project.scripts]
+kuma-export = "kuma_export:main"
+
+[tool.setuptools]
+py-modules = ["kuma_export"]
